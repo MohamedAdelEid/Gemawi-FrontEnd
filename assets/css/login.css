@@ -1,0 +1,208 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: url("../imgs/Wallpaper\ Login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.wallpaper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: .2s ease;
+    z-index: 2;
+    padding: 4px;
+}
+
+.wallpaper::before {
+    content: '';
+    position: absolute;
+    top: -45%;
+    left: -19%;
+    width: 280px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, #034EA1, #034EA1, #034EA1);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wallpaper.active {
+    height: 510px;
+}
+
+.wallpaper .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.wallpaper .form-box {
+    width: 100%;
+    padding: 40px 50px;
+    padding-bottom: 35px;
+    z-index: 2;
+    background-color: #181818;
+    border-radius: 9px;
+    padding-bottom: -5px;
+}
+
+.wallpaper .form-box.login {
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+.wallpaper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wallpaper .form-box.register {
+    position: absolute;
+    width: 392px;
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    transition: none;
+}
+
+.wallpaper.active .form-box.register {
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+.wallpaper .form-box h2 {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.wallpaper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.wallpaper .input-box label {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 10px;
+}
+
+.wallpaper .input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 13px 35px 0 5px;
+
+}
+
+.wallpaper .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #034EA1;
+    line-height: 57px;
+}
+
+.wallpaper .remember-forget {
+    font-size: .9em;
+    color: #ffffff;
+    font-size: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wallpaper .remember-forget .forget {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.wallpaper .remember-forget .forget:hover {
+    text-decoration: underline;
+}
+
+.btn1 {
+    width: 100%;
+    height: 45px;
+    background-color: #034EA1;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.btn1:hover {
+    background-color: #02438d;
+    letter-spacing: 2px;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
