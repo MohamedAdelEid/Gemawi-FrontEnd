@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMAWI</title>
+    <link rel="icon" href="assets/imgs/male-silhouette-variant-showing-muscles.png">
+
+    <!-- includes bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- include main css -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <!-- include normalize css -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- include cdn fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- include cdn google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wallpaper" style="height: 500px;">
+        <div class="container">
+            <!-- <span class="icon-close">
+                <i class="fa-solid fa-xmark"></i>
+            </span> -->
+
+
+            <div class="form-box register" style="padding-bottom: px;">
+                <h2>Registertion</h2>
+                <form action="">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input id="username" onkeyup="valid()" type="text" required>
+                        <label for="">Username</label>
+                        <div id="1"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input id="email" onkeyup="valid_email()" type="email" required>
+                        <label for="">Email</label>
+                        <div id="2"></div>
+
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input id="pass" onkeyup="valid_pass()" type="password" required>
+                        <label for="">Password</label>
+                        <div id="3"></div>
+
+                    </div>
+                    <div class="remember-forget">
+                        <div><label for="chek1"><input style="margin-right: 5px; " type="radio" id="chek1" required>I
+                                agree to the terms & conditions</label></div>
+                    </div>
+                    <button id="btn" onclick="all_valid()" class="btn1">Register</button>
+
+                    <div class="login-register">
+                        <p>Already have an account?
+                            <a href='login.html' s="login-link">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
